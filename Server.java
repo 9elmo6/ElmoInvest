@@ -33,7 +33,7 @@ class ClientHandler extends Thread {
 
             String message = dataInputStream.readUTF();
             System.out.println("Message received from client: " + message);
-
+          
             dataOutputStream.writeUTF("Hello from the server!");
             dataOutputStream.flush();
             dataOutputStream.close();

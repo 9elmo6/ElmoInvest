@@ -29,47 +29,52 @@ public class StockMarketClient {
                 String password = scanner.nextLine();
                 out.println(password);
 
-                
-                    //Taking user choice
-                System.out.println("Please choose from the following options");
-                System.out.println("1 Search for a stock");
-                System.out.println("2. Buy stocks");
-                System.out.println("3. Edit stocks (admins only)");
-                System.out.println("4. Exit");
-                String choice = scanner.nextLine();
-                out.println(choice);
+                if (in.readLine().equals("SUCCESS")){
+                //Taking user choice
+                    System.out.println("Please choose from the following options");
+                    System.out.println("1 Search for a stock");
+                    System.out.println("2. Buy stocks");
+                    System.out.println("3. Edit stocks (admins only)");
+                    System.out.println("4. Exit");
+                    String choice = scanner.nextLine();
+                    out.println(choice);
 
-                switch(Integer.parseInt(choice)){
-                    case 1:
-                   
-                        System.out.print("Enter stock name: ");
-                        String stockName = scanner.nextLine();
-                        out.println(stockName);
-                        out.flush();
-                        String price = in.readLine();
-                        System.out.println("Price: " + price);
-                    break;
-                    case 2:
-                        System.out.println("Which stock would you like to invest?");
-                        String invest = scanner.nextLine();
-                        out.println(invest); 
-                        System.out.println("How many stocks would you like to buy?");
-                        String nstocks = scanner.nextLine();
-                        out.println(nstocks);
-                        System.out.print("Your investment = "+ in.readLine());    
-                    break;
-                    case 3:
-                    System.out.print("Please enter the stock you want to add ");
-                    String NewStock = scanner.nextLine();
-                    out.println(NewStock);
-                    System.out.print("Please enter the stock price ");
-                    String NewPrice = scanner.nextLine();
-                    out.println(NewPrice);
-                    System.out.println(in.readLine());
+                    switch(Integer.parseInt(choice)){
+                        case 1:
+   
+                            System.out.print("Enter stock name: ");
+                            String stockName = scanner.nextLine();
+                            out.println(stockName);
+                            out.flush();
+                            String price = in.readLine();
+                            System.out.println("Price: " + price);
+                            break;
+                        case 2:
+                            System.out.println("Which stock would you like to invest?");
+                            String invest = scanner.nextLine();
+                            out.println(invest); 
+                            System.out.println("How many stocks would you like to buy?");
+                            String nstocks = scanner.nextLine();
+                            out.println(nstocks);
+                            System.out.print("Your investment = "+ in.readLine());    
+                            break;
+                        case 3:
+                            System.out.print("Please enter the stock you want to add ");
+                            String NewStock = scanner.nextLine();
+                            out.println(NewStock);
+                            System.out.print("Please enter the stock price ");
+                            String NewPrice = scanner.nextLine();
+                            out.println(NewPrice);
+                            System.out.println(in.readLine());
 
-                    break;
-                }
-            
+                            break;
+                        }       
+
+                    }
+                    else{
+                        System.out.print("Wronge password, try again");
+                    }
+                    
                 
             } catch (UnknownHostException e) {
                 System.err.println("Don't know about host " + "localhost");

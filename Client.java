@@ -16,6 +16,8 @@ public class Client {
 
         String message = dataInputStream.readUTF();
         System.out.println("Message received from server: " + message);
+        
+
 
         dataInputStream.close();
         dataOutputStream.close();
